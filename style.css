@@ -7,6 +7,7 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     display: flex;
+    font-size: 17px;
 }
 
 /* SIDE BAR */
@@ -167,6 +168,11 @@ body{
     align-items: center;
     justify-content: center;
 }
+.appointments div, .patients div, .staffs div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .assessibles button{
     width: 67px;
     height: 70px;
@@ -174,7 +180,76 @@ body{
     border: 0;
     background-color: rgba(0, 0, 0, 0.4);
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-progress{
+progress {
+    border-radius: 15px; 
     width: 140px;
+    height: 8px;
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+progress::-webkit-progress-bar {
+    background-color: rgba(128, 128, 128, 0.198);
+    border-radius: 15px;
+}
+progress::-webkit-progress-value {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.1);
+}
+
+.upcoming{
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+.upcoming-urgencies{
+    display: flex;
+    background-color: #F1E813;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    border-radius: 10px;
+}
+.upcoming-urgencies p{
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+}
+.upcoming-urgencies img{
+    width: 24px;
+    height: 24px;
+}
+.critical, .stable, .terminal, .surgery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.upcoming-appointments{
+    background-color: #FA9520;
+    width: 504px;
+    padding: 26px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.upcoming-appointments p{
+    font-weight: 700;
+}
+.upcoming-appointments p:nth-child(1){
+    font-weight: 400;
+    text-decoration: underline;
+}
+.upcoming-appointments p:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+
+.doctors{
+    width: 305px;
 }
