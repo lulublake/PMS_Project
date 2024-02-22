@@ -7,13 +7,13 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     display: flex;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 /* SIDE BAR */
 .side-bar{
-    width: 256px;
     height: 100vh;
+    width: 15vw;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -24,7 +24,7 @@ body{
    display: flex;
    gap: 15px;
 }
-.side-bar h1, .main-sec h1{
+.side-bar h1, .main-sec h1, .patient-sec h1{
     font-family: 'Squada One', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -52,6 +52,9 @@ body{
     gap: 15px;
     margin-left: 10px;
 }
+.active{
+    background-color: #26C70C;
+}
 .menu p{
     display: flex;
     align-items: center;
@@ -59,7 +62,7 @@ body{
     padding: 8px 0px 8px 12px;
     border-radius: 5px;
 }
-.menu p:nth-child(1){
+.menu a:active{
     box-shadow: 1px 2px 20px rgba(194, 193, 193, 0.832);
 }
 .menu a{
@@ -83,9 +86,9 @@ body{
 /* NAVBAR */
 .navbar{
     display: flex;
-    padding: 20px 0;
     justify-content: center;
-    width: 100vw;
+    padding: 20px 0 20px 180px;
+    width: 85vw;
     box-shadow: 10px 2px 15px rgba(194, 194, 194, 0.491);
 }
 .search-bar{
@@ -116,10 +119,10 @@ body{
 }
 .active-profile{
     display: flex;
-    width: 30vw;
-    justify-content: flex-end;
     gap: 20px;
     align-items: center;
+    width: 30vw;
+    justify-content: flex-end;
 }
 .display-name p{
     display: flex;
@@ -128,24 +131,25 @@ body{
 }
 
 /* MAIN SECTION */
-.main-sec{
-    padding: 62px;
+.main-sec, .patient-sec{
+    padding: 40px 62px 0;
 }
 .assessibles{
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     gap: 30px;
     color: white;
     font-size: 22px;
+   
 }
 .appointments{
-    background-color: #C053D2;  
+    background-color: rgba(191, 83, 210, 0.66);  
 }
 .patients{
-    background-color: #455EE3;
+    background-color: rgba(69, 93, 227, 0.66);
 }
 .staffs{
-    background-color: #32be30;
+    background-color: rgba(50, 190, 48, 0.76);
 }
 .request{
     width: 172px;
@@ -156,7 +160,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 700;
     gap: 10px;
 }
@@ -203,11 +207,11 @@ progress::-webkit-progress-value {
 .upcoming{
     display: flex;
     gap: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .upcoming-urgencies{
     display: flex;
-    background-color: #F1E813;
+    background-color: rgba(241, 234, 19, 0.66);
     padding: 30px;
     align-items: center;
     justify-content: space-between;
@@ -230,7 +234,7 @@ progress::-webkit-progress-value {
     gap: 8px;
 }
 .upcoming-appointments{
-    background-color: #FA9520;
+    background-color: rgba(250, 148, 32, 0.70);
     width: 504px;
     padding: 26px;
     border-radius: 10px;
@@ -250,6 +254,134 @@ progress::-webkit-progress-value {
     justify-content: space-between;
 }
 
+/* ACTIVITIES */
+.activities{
+    margin-top: 15px;
+    display: flex;
+    gap: 60px;
+}
 .doctors{
     width: 305px;
+    padding: 24px 18px 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(128, 128, 128, 0.194);
+}
+.doctors h2{
+    color: #808080;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.doctors hr, .next-activity hr{
+    border: 0.1px solid rgba(128, 128, 128, 0.217);
+}
+.doctors a{
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 5px;
+}
+.cherry, .marcus, .murphy, .jerry, .mary{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+}
+.cherry button, .marcus button, .murphy button, .jerry button, .mary button{
+    padding: 5px;
+    border-radius: 100%;
+    border: 0;
+}
+.marcus button, .murphy button{
+    background-color: red;
+}
+.jerry button, .mary button, .cherry button{
+    background-color: greenyellow;
+}
+.cherry div p:nth-child(2), .marcus div p:nth-child(2), .murphy div p:nth-child(2), .jerry div p:nth-child(2), .mary div p:nth-child(2){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #808080;
+    font-weight: 700;
+}
+.cherry div, .marcus div, .murphy div, .jerry div, .mary div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.cherry div p:nth-child(1), .marcus div p:nth-child(1), .murphy div p:nth-child(1), .jerry div p:nth-child(1), .mary div p:nth-child(1){
+    font-weight: 700;
+}
+
+.next-activity{
+    width: 690px;
+    font-size: 20px;
+    box-shadow: 2px 2px 15px rgba(128, 128, 128, 0.194);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.next-activity h2{
+    color: grey;
+    font-size: 20px;
+}
+.next-activity p:nth-child(2), .next-activity span{
+    color: grey;
+    font-weight: 400;
+}
+.next-activity span{
+    font-style: italic;
+}
+.next-activity p:nth-child(1){
+    font-weight: 700;
+}
+.styled-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+.styled-div button, .patient-container button{
+    background-color: black;
+    padding: 3px;
+    border-radius: 100%;
+    border: 0;
+}
+.activity-buttons, .patient-button{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.restyled-div{
+    display: flex;
+    gap: 10px;
+}
+
+
+/************************************ PATIENTS PAGE ***********************************/
+.patient-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 3px 3px 15px rgba(185, 185, 185, 0.307);
+    margin-top: 35px;
+}
+.patient-button{
+    flex-direction: column;
+}
+.patient-container button{
+    padding: 2px;
+}
+.patient-sec{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 100px;
+}
+.patient-container p:nth-child(1){
+    color: #858585;
+    font-size: 12px;
+}
+.patient-container p:nth-child(2){
+    font-weight: 700;
+    font-size: 15px;
 }
