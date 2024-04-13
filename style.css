@@ -137,7 +137,8 @@ body{
 .assessibles{
     margin-top: 15px;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    /* gap: 50px; */
     color: white;
     font-size: 22px;
    
@@ -152,7 +153,7 @@ body{
     background-color: rgba(50, 190, 48, 0.76);
 }
 .request{
-    width: 172px;
+    width: 200px;
     height: 139px;
     border-radius: 10px;
     background-color: rgba(255, 0, 0, 0.76);
@@ -165,7 +166,7 @@ body{
     gap: 10px;
 }
 .appointments, .patients, .staffs{
-    width: 265px;
+    width: 305px;
     height: 139px;
     border-radius: 10px;
     display: flex;
@@ -183,7 +184,7 @@ body{
     border-radius: 100%;
     border: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    margin-right: 10px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,75 +205,144 @@ progress::-webkit-progress-value {
     box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.1);
 }
 
-.upcoming{
+/* ACTIVITIES */
+.activities{
+    margin-top: 35px;
     display: flex;
-    gap: 50px;
-    margin-top: 15px;
-}
-.upcoming-urgencies{
-    display: flex;
-    background-color: rgba(241, 234, 19, 0.66);
-    padding: 30px;
-    align-items: center;
-    justify-content: space-between;
-    width: 400px;
-    border-radius: 10px;
-}
-.upcoming-urgencies p{
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 700;
-}
-.upcoming-urgencies img{
-    width: 24px;
-    height: 24px;
-}
-.critical, .stable, .terminal, .surgery{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-.upcoming-appointments{
-    background-color: rgba(250, 148, 32, 0.70);
-    width: 504px;
-    padding: 26px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
-.upcoming-appointments p{
+/* Patient list */
+.denzel, .stacy, .amy, .demi, .kelly, .steven, .kris{
+    display: flex;
+    gap: 20px;
+}
+.patient_names{
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pending_appointment .patient_names div p:nth-child(1){
     font-weight: 700;
 }
-.upcoming-appointments p:nth-child(1){
-    font-weight: 400;
-    text-decoration: underline;
-}
-.upcoming-appointments p:nth-child(3){
+.patient_names div p:nth-child(2){
     display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #808080;
+}
+.pending_appointment .patient_names div p:nth-child(2){
+    font-weight: 700;
+}
+.patient_names div p:nth-child(2) button{
+    padding: 4px;
+    border-radius: 100%;
+    border: 0;
+    background-color: #25cb0b;
+}
+.denzel div p:nth-child(2), .stacy div p:nth-child(2){
+    color: #f62088;
+    font-size: 11px;
+}
+.amy div p:nth-child(2){
+    font-size: 11px;
+    color: hsla(240, 100%, 50%, 0.60);
+}
+.demi div p:nth-child(2){
+    font-size: 11px;
+    color: #128983;
+}
+.denzel div p:nth-child(1), .stacy div p:nth-child(1), .amy div p:nth-child(1), .demi div p:nth-child(1) {
+    font-size: 16px;
+}
+.denzel button:nth-child(1), .stacy button:nth-child(1), .amy button:nth-child(1), .demi button:nth-child(1), .k_btn{
+    width: 44px;
+    height: 42px;
+    border-radius: 100%;
+    border: 1px solid;
+    font-size: 16px;
+}
+.denzel button:nth-child(1), .stacy button:nth-child(1), .kelly .k_btn {
+    color: #f62088;
+    background-color: hsla(331, 92%, 55%, 0.15);
+}
+.amy button:nth-child(1), .steven .k_btn{
+    color: hsla(240, 100%, 50%, 0.60);
+    background-color: hsla(240, 100%, 50%, 0.15);
+}
+.demi button:nth-child(1), .kris .k_btn{
+     color: #128983;
+     background-color: hsla(177, 77%, 30%, 0.15);
+}
+.denzel_button, .amy_button, .demi_button{
+    border-radius: 10px;
+    font-size: 11px;
+    border: 0;
+    width: 60px;
+    height: 30px;
+}
+.denzel_button{
+    color: #f62088;
+    background-color: hsla(331, 92%, 55%, 0.15);
+}
+.amy_button{
+    color: hsla(240, 100%, 50%, 0.60);
+    background-color: hsla(240, 100%, 50%, 0.15);
+}
+.demi_button{
+    color: #128983;
+    background-color: hsla(177, 77%, 30%, 0.15);
+}
+
+.patient_list, .pending_appointment{
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-/* ACTIVITIES */
-.activities{
-    margin-top: 15px;
-    display: flex;
-    gap: 60px;
-}
-.doctors{
-    width: 305px;
-    padding: 24px 18px 18px;
+.doctors, .patient_list, .pending_appointment{
+    width: 420px;
+    padding: 24px 28px 18px;
     border-radius: 10px;
     box-shadow: 2px 2px 15px rgba(128, 128, 128, 0.194);
 }
-.doctors h2{
-    color: #808080;
-    font-size: 22px;
-    margin-bottom: 20px;
-    padding-left: 10px;
+.pending_appointment{
+    width: 380px;
 }
-.doctors hr, .next-activity hr{
+.confirmation{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+.confirmation button{
+    border: 0;
+    border-radius: 8px;
+    padding: 5px;
+}
+.confirmation button:nth-child(1){
+    background-color: #00ff00;
+}
+.confirmation button:nth-child(2){
+    background-color: hsla(0, 100%, 69%, 0.24);
+}
+.green_btn, .red_btn{
+    font-size: 12px;
+    font-weight: bold;
+    width: 80px;
+    height: 35px;
+}
+.green_btn{
+    color: #0baf0b;
+    background-color: hsla(120, 100%, 50%, 0.24);
+}
+
+
+.doctors h2, .patient_list h2, .pending_appointment h2{
+    color: #4b4b4b;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.doctors hr, .pending_appointment hr{
     border: 0.1px solid rgba(128, 128, 128, 0.217);
 }
 .doctors a{
@@ -307,81 +377,166 @@ progress::-webkit-progress-value {
 }
 .cherry div, .marcus div, .murphy div, .jerry div, .mary div{
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    gap: 15px;
+    
 }
 .cherry div p:nth-child(1), .marcus div p:nth-child(1), .murphy div p:nth-child(1), .jerry div p:nth-child(1), .mary div p:nth-child(1){
-    font-weight: 700;
-}
-
-.next-activity{
-    width: 690px;
-    font-size: 20px;
-    box-shadow: 2px 2px 15px rgba(128, 128, 128, 0.194);
-    border-radius: 10px;
-    padding: 10px 0;
-}
-.next-activity h2{
-    color: grey;
-    font-size: 20px;
-}
-.next-activity p:nth-child(2), .next-activity span{
-    color: grey;
     font-weight: 400;
 }
-.next-activity span{
-    font-style: italic;
-}
-.next-activity p:nth-child(1){
-    font-weight: 700;
-}
-.styled-div{
+
+
+
+
+/************************************ PATIENTS PAGE ***********************************/
+.patient-sec{
     display: flex;
+    padding: 60px 100px;
+    gap: 20px;
+}
+
+.patient_sec_list{
+    width: 389px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 10px 25px;
+    height: 75vh;
+    padding: 20px;
 }
-.styled-div button, .patient-container button{
-    background-color: black;
-    padding: 3px;
-    border-radius: 100%;
-    border: 0;
+.right-patient-sec{
+    width: 714px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e5e5;
 }
-.activity-buttons, .patient-button{
+
+/************************* MESSAGE PAGE ***********************/
+.message-sec{
     display: flex;
     align-items: center;
-    gap: 2px;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 30px;
 }
-.restyled-div{
+.left-mess-sec{
+    max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 35px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+.right-mess-sec{
+    width: 714px;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid #e5e5e5;
+}
+.right-mess-sec button{
+    border: 0;
+    border-radius: 100%;
+    padding: 50px;
+}
+.right-mess-sec h1{
+    font-size: 40px;
+    color: gray;
+}
+.edit_message{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edit_message h2{
+    font-size: 25px;
+}
+.edit_message button{
+    border: 0;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+.form{
+    display: flex;
+    gap: 7px;
+    background-color: hsla(0, 0%, 91%, 0.70);
+    padding: 14px 20px;
+    border-radius: 10px;
+}
+.form input{
+    border: 0;
+    background-color: transparent;
+    width: 80%;
+}
+.form input::placeholder{
+    color: #b2b2b2;
+    font-size: 18px;
+}
+#pinned{
+    display: flex;
+    align-items: center;
+    color: #979797;
+}
+.support{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#support_btn{
+    border: 0;
+    background-color: rgba(255, 0, 0, 0.71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+#all_messages{
     display: flex;
     gap: 10px;
 }
 
-
-/************************************ PATIENTS PAGE ***********************************/
-.patient-container{
+.message{
+    display: flex;
+    gap: 10px;
+}
+.message div p:nth-child(2){
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 3px 3px 15px rgba(185, 185, 185, 0.307);
-    margin-top: 35px;
 }
-.patient-button{
-    flex-direction: column;
-}
-.patient-container button{
-    padding: 2px;
-}
-.patient-sec{
-    display: flex;
-    flex-direction: column;
-    padding: 60px 100px;
-}
-.patient-container p:nth-child(1){
-    color: #858585;
+.admin p:nth-child(2){
+    color: #a9a7a7;
     font-size: 12px;
 }
-.patient-container p:nth-child(2){
+.message div p:nth-child(2) button, .support div p:nth-child(2) button{
+    border: 0;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+}
+.admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.admin p:nth-child(1), .admin p:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+.admin p:nth-child(1){
     font-weight: 700;
-    font-size: 15px;
+}
+.admin p:nth-child(1) span{
+    font-weight: 400;
+    color: #a9a7a7;
+    font-size: 12px;
 }
